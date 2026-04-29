@@ -1,0 +1,67 @@
+Teams Page
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qualified Teams - World Cup 2026</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo"><i class="fas fa-trophy"></i> WORLD CUP HUB</div>
+        <nav>
+            <ul>
+                <li><a href="file:///C:/Users/owura/Documents/World%20Cup%20Hub%20Project/Home%20Page.html">Home</a></li>
+                <li><a href="file:///C:/Users/owura/Documents/World%20Cup%20Hub%20Project/Team%20Page.html">Teams</a></li>
+                <li><a href="file:///C:/Users/owura/Documents/World%20Cup%20Hub%20Project/Player%20Page.html">Players</a></li>
+                <li><a href="file:///C:/Users/owura/Documents/World%20Cup%20Hub%20Project/Schedule%20Page.html">Schedule</a></li>
+            </ul>
+        </nav>
+    </header>
+
+   <main style="padding: 2rem 5%;">
+        <h2>Participating Nations</h2>
+        
+        <div style="margin: 20px 0;">
+            <label>Filter by Group: </label>
+            <select id="teamGroupFilter" onchange="filterTeams()" style="padding: 8px; border-radius: 5px;">
+                <option value="all">All Groups</option>
+                <option value="Group A">Group A</option>
+                <option value="Group B">Group B</option>
+                <option value="Group C">Group C</option>
+                <option value="Group D">Group D</option>
+                <option value="Group J">Group J</option>
+                <option value="Group L">Group L</option>
+            </select>
+        </div>
+
+        <div class="grid-3">
+            <div class="card" data-group="Group A"><div class="card-content"><span class="tag">Group A</span><h3>Mexico</h3><p>Rank: 15</p></div></div>
+            <div class="card" data-group="Group A"><div class="card-content"><span class="tag">Group A</span><h3>South Africa</h3><p>Rank: 59</p></div></div>
+            <div class="card" data-group="Group B"><div class="card-content"><span class="tag">Group B</span><h3>Canada</h3><p>Rank: 50</p></div></div>
+            <div class="card" data-group="Group B"><div class="card-content"><span class="tag">Group B</span><h3>Switzerland</h3><p>Rank: 19</p></div></div>
+            <div class="card" data-group="Group C"><div class="card-content"><span class="tag">Group C</span><h3>Brazil</h3><p>Rank: 5</p></div></div>
+            <div class="card" data-group="Group C"><div class="card-content"><span class="tag">Group C</span><h3>Morocco</h3><p>Rank: 13</p></div></div>
+            <div class="card" data-group="Group D"><div class="card-content"><span class="tag">Group D</span><h3>USA</h3><p>Rank: 11</p></div></div>
+            <div class="card" data-group="Group D"><div class="card-content"><span class="tag">Group D</span><h3>Paraguay</h3><p>Rank: 56</p></div></div>
+            <div class="card" data-group="Group J"><div class="card-content"><span class="tag">Group J</span><h3>Argentina</h3><p>Rank: 1</p></div></div>
+            <div class="card" data-group="Group J"><div class="card-content"><span class="tag">Group J</span><h3>Algeria</h3><p>Rank: 33</p></div></div>
+            <div class="card" data-group="Group L"><div class="card-content"><span class="tag">Group L</span><h3>England</h3><p>Rank: 4</p></div></div>
+            <div class="card" data-group="Group L"><div class="card-content"><span class="tag">Group L</span><h3>Croatia</h3><p>Rank: 10</p></div></div>
+        </div>
+    </main>
+
+    <script>
+        function filterTeams() {
+            const val = document.getElementById('teamGroupFilter').value;
+            const cards = document.querySelectorAll('.card');
+            cards.forEach(card => {
+                const group = card.getAttribute('data-group');
+                card.style.display = (val === 'all' || val === group) ? "block" : "none";
+            });
+        }
+    </script>
+</body>
+</html>

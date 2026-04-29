@@ -1,0 +1,113 @@
+schedule page
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Match Schedule - World Cup 2026</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo"><i class="fas fa-trophy"></i> WORLD CUP HUB</div>
+        <nav>
+            <ul>
+                <li><a href="file:///C:/Users/owura/Documents/World%20Cup%20Hub%20Project/Home%20Page.html">Home</a></li>
+                <li><a href="file:///C:/Users/owura/Documents/World%20Cup%20Hub%20Project/Team%20Page.html">Teams</a></li>
+                <li><a href="file:///C:/Users/owura/Documents/World%20Cup%20Hub%20Project/Player%20Page.html">Players</a></li>
+                <li><a href="file:///C:/Users/owura/Documents/World%20Cup%20Hub%20Project/Schedule%20Page.html">Schedule</a></li>
+            </ul>
+        </nav>
+    </header>
+
+   <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Schedule - World Cup 2026</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo"><i class="fas fa-calendar-alt"></i> WC2026 FIXTURES</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="teams.html">Teams</a></li>
+                <li><a href="schedule.html">Schedule</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main style="padding: 2rem 5%;">
+        <h2>Full Match Schedule</h2>
+        
+        <div style="margin-bottom: 20px; display: flex; gap: 10px; flex-wrap: wrap;">
+            <input type="text" id="schedSearch" placeholder="Search team (e.g. USA)..." onkeyup="filterSchedule()" style="padding: 10px; flex: 1; min-width: 200px; border-radius: 5px; border: 1px solid #ccc;">
+            <select id="stageFilter" onchange="filterSchedule()" style="padding: 10px; border-radius: 5px;">
+                <option value="">All Stages</option>
+                <option value="Group Stage">Group Stage</option>
+                <option value="Round of 32">Round of 32</option>
+                <option value="Round of 16">Round of 16</option>
+                <option value="Quarter-Final">Quarter-Final</option>
+                <option value="Semi-Final">Semi-Final</option>
+                <option value="Final">The Final</option>
+            </select>
+        </div>
+
+        <div class="table-container">
+            <table id="scheduleTable">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Stage</th>
+                        <th>Matchup</th>
+                        <th>Venue</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>June 11</td><td>Group Stage</td><td>Mexico vs South Africa</td><td>Mexico City</td></tr>
+                    <tr><td>June 11</td><td>Group Stage</td><td>South Korea vs Czechia</td><td>Guadalajara</td></tr>
+                    <tr><td>June 12</td><td>Group Stage</td><td>Canada vs Bosnia & Herz.</td><td>Toronto</td></tr>
+                    <tr><td>June 12</td><td>Group Stage</td><td>USA vs Paraguay</td><td>Los Angeles</td></tr>
+                    <tr><td>June 13</td><td>Group Stage</td><td>Brazil vs Morocco</td><td>New York/NJ</td></tr>
+                    <tr><td>June 14</td><td>Group Stage</td><td>Germany vs Curaçao</td><td>Houston</td></tr>
+                    <tr><td>June 15</td><td>Group Stage</td><td>Spain vs Cabo Verde</td><td>Atlanta</td></tr>
+                    <tr><td>June 16</td><td>Group Stage</td><td>France vs Senegal</td><td>New York/NJ</td></tr>
+                    <tr><td>June 16</td><td>Group Stage</td><td>Argentina vs Algeria</td><td>Kansas City</td></tr>
+                    <tr><td>June 17</td><td>Group Stage</td><td>England vs Croatia</td><td>Dallas</td></tr>
+
+                    <tr><td>June 18</td><td>Group Stage</td><td>Mexico vs South Korea</td><td>Guadalajara</td></tr>
+                    <tr><td>June 19</td><td>Group Stage</td><td>USA vs Australia</td><td>Seattle</td></tr>
+                    <tr><td>June 20</td><td>Group Stage</td><td>Germany vs Ivory Coast</td><td>Toronto</td></tr>
+                    <tr><td>June 21</td><td>Group Stage</td><td>Spain vs Saudi Arabia</td><td>Atlanta</td></tr>
+                    <tr><td>June 22</td><td>Group Stage</td><td>Argentina vs Austria</td><td>Dallas</td></tr>
+                    <tr><td>June 23</td><td>Group Stage</td><td>England vs Ghana</td><td>Boston</td></tr>
+
+                    <tr><td>June 24</td><td>Group Stage</td><td>Czechia vs Mexico</td><td>Mexico City</td></tr>
+                    <tr><td>June 25</td><td>Group Stage</td><td>Ecuador vs Germany</td><td>New York/NJ</td></tr>
+                    <tr><td>June 26</td><td>Group Stage</td><td>Uruguay vs Spain</td><td>Guadalajara</td></tr>
+                    <tr><td>June 27</td><td>Group Stage</td><td>Colombia vs Portugal</td><td>Los Angeles</td></tr>
+
+                    <tr><td>June 28 - July 3</td><td>Round of 32</td><td>Top 32 Teams</td><td>Various Cities</td></tr>
+                    <tr><td>July 4 - July 7</td><td>Round of 16</td><td>Top 16 Teams</td><td>Various Cities</td></tr>
+                    <tr><td>July 9 - July 11</td><td>Quarter-Final</td><td>Quarter-Finalists</td><td>Boston, LA, Miami, KC</td></tr>
+                    <tr><td>July 14 - July 15</td><td>Semi-Final</td><td>Semi-Finalists</td><td>Dallas, Atlanta</td></tr>
+                    <tr><td>July 18</td><td>Third Place</td><td>TBD vs TBD</td><td>Miami</td></tr>
+                    <tr style="background: var(--accent); font-weight: bold;">
+                        <td>July 19</td>
+                        <td>Final</td>
+                        <td>World Cup Final</td>
+                        <td>New York/New Jersey</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+
+</body>
+</html>
