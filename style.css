@@ -69,4 +69,34 @@
         .social-links { margin-top: 1rem; font-size: 1.5rem; display: flex; justify-content: center; gap: 20px; }
         .social-links i { cursor: pointer; transition: 0.3s; }
         .social-links i:hover { color: var(--accent); }
-    
+nav ul { display: flex; list-style: none; gap: 20px; align-items: center; }
+
+.dropdown { position: relative; }
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--white);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    z-index: 100;
+    border-radius: 8px;
+    top: 100%;
+    left: 0;
+}
+
+.dropdown-content a {
+    color: var(--dark);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: 0.3s;
+}
+
+.dropdown-content a:hover {
+    background-color: var(--light);
+    color: var(--primary);
+    border-radius: 8px;
+}
+
+.dropdown:hover .dropdown-content { display: block; }
